@@ -36,7 +36,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Button Start = (Button)findViewById(R.id.start);
-        Button Stop =(Button)findViewById(R.id.Stop);
         Button About = (Button)findViewById(R.id.about_2);
 
 
