@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
                 }
             }) ;} }
 
-    //Run at start up Class
+    //this class makes app run on Phone start_up
     public static class StartMyServiceAtBootReceiver extends BroadcastReceiver {
 
         @Override
