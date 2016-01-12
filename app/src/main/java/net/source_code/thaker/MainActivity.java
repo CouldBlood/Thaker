@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -42,20 +41,15 @@ public class MainActivity extends Activity {
 
 
 
+        //Start button
         Start.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
-
-
                 try{
-
                     timerx = new Timer();
                     Ttask = new MyTimerTask_2();
-
-                    timerx.schedule(Ttask, 625000, 625000);
+                    //Method repeat Run() from TimerTask class
+                    timerx.schedule(Ttask, 625000, 625000);//625,000 microsecond = about 10 minutes
 
                     Toast.makeText(getBaseContext(),"بدأ البرنامج بالعمل",Toast.LENGTH_SHORT).show();
                     finish();
@@ -66,8 +60,6 @@ public class MainActivity extends Activity {
                     catch(Exception e){
                     Toast.makeText(getBaseContext(),"البرنامج يعمل بالفعل",Toast.LENGTH_SHORT).show();
                }
-
-
             }
         });
 
@@ -82,33 +74,21 @@ public class MainActivity extends Activity {
 
 
     }
-public void timer()
-{
-    timerx.cancel();
-}
 
 
+        //repeating class
     public class MyTimerTask_2 extends TimerTask{
 
         @Override
         public void run() {
-
             runOnUiThread(new Runnable(){
-
                 @Override
                 public void run() {
-
-
-
                     startActivity(new Intent(MainActivity.this, MSG.class));
-
-
                 }
+            }) ;} }
 
-
-            });
-        }
-     }
+    //Run at start up Class
     public static class StartMyServiceAtBootReceiver extends BroadcastReceiver {
 
         @Override

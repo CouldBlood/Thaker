@@ -38,7 +38,7 @@ public class MSG extends Activity {
          timerx.schedule(Ttask, 5000,5000);
 
 
-              Stop.setOnClickListener(new View.OnClickListener() {
+        Stop.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
