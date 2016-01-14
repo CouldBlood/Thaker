@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         Start.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
+
                     timerx = new Timer();
                     Ttask = new MyTimerTask_2();
                     //Method repeat Run() from TimerTask class
@@ -53,12 +53,9 @@ public class MainActivity extends Activity {
                     Toast.makeText(getBaseContext(),"بدأ البرنامج بالعمل",Toast.LENGTH_SHORT).show();
                     finish();
 
-                 }
 
 
-                    catch(Exception e){
-                    Toast.makeText(getBaseContext(),"البرنامج يعمل بالفعل",Toast.LENGTH_SHORT).show();
-               }
+
             }
         });
 
