@@ -62,7 +62,7 @@
                 android:layout_height="100dp"
                 android:text="إبدأ"
                 android:id="@+id/start"
-                android:layout_gravity="center_horizontal|top"
+                android:layout_gravity="center_horizontal|bottom"
                 android:textSize="35dp" />
 
         </FrameLayout>
