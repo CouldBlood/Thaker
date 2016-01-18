@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -17,6 +18,7 @@ import java.util.TimerTask;
 public class MSG extends Activity {
     Timer timerx ;
     MyTimerTask Ttask;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +36,19 @@ public class MSG extends Activity {
         });
 
        timerx = new Timer();
-        Ttask = new MyTimerTask();
-         timerx.schedule(Ttask, 5000,5000);
+       Ttask = new MyTimerTask();
 
+         timerx.schedule(Ttask, 5000);
 
         Stop.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-            android.os.Process.killProcess(android.os.Process.myPid());
-        finish();
+                android.os.Process.killProcess(android.os.Process.myPid());
+                finish();
 
-        }
-    });
+            }
+        });
     }
 
 

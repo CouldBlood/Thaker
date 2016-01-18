@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.source_code.thaker" >
+    package="net.source_code.thaker">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -8,11 +8,11 @@
         android:allowBackup="true"
         android:icon="@drawable/app_lancher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-         />
+        android:theme="@style/AppTheme">
+        />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,7 @@
         <receiver
             android:name=".BootReceiver"
             android:enabled="true"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
@@ -34,15 +34,14 @@
         <activity
             android:name=".MSG"
             android:label="@string/title_activity_msg"
-            android:theme="@style/Theme.AppCompat.Light.Dialog" >
-        </activity>
-        <activity android:name=".info" >
-        </activity>
-        <activity android:name=".about" >
-        </activity>
-        <activity android:name=".feedback" >
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".info" />
+        <activity android:name=".about" />
+        <activity android:name=".feedback" />
 
+        <service
+            android:name=".Repeater"
+            android:exported="false"></service>
     </application>
 
 </manifest>
