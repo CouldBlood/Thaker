@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Button Start = (Button)findViewById(R.id.start);
+
         Button About = (Button)findViewById(R.id.about_2);
 
 
@@ -39,8 +40,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                     startService(new Intent(MainActivity.this, Repeater.class));
-
-                    Toast.makeText(getBaseContext(),"بدأ البرنامج بالعمل",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(),"بدأ برنامج ذكّر بالعمل",Toast.LENGTH_SHORT).show();
                     finish();
 
 
@@ -48,6 +48,7 @@ public class MainActivity extends Activity {
 
             }
         });
+
 
 
 
