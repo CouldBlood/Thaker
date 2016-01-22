@@ -28,7 +28,7 @@ public class Repeater extends Service {
             i.setClass(Repeater.this, MSG.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
-            handler.postDelayed(this, 12000);
+            handler.postDelayed(this, 500000); // 500000 = about 10 minutes
 
 
         }
