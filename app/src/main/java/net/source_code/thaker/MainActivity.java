@@ -6,13 +6,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 
@@ -65,20 +62,4 @@ public class MainActivity extends Activity {
 
 
 
-
-
-
-
-
-    //this class makes app run on Phone start_up
-    public static class StartMyServiceAtBootReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-                Intent serviceIntent = new Intent(context, MainActivity.class);
-                context.startService(serviceIntent);
-            }
-        }
-    }
 }

@@ -19,9 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
         <activity
             android:name=".MSG"
             android:label="@string/title_activity_msg"
@@ -35,6 +32,15 @@
             android:enabled="true"
             android:exported="true" />
 
+        <receiver
+            android:name=".on_Start_up"
+            android:enabled="true"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

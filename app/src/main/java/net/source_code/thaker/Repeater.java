@@ -10,6 +10,7 @@ public class Repeater extends Service {
 
     public Repeater() {
         handler.postDelayed(updateTimerThread, 0);
+
     }
 
 
@@ -29,6 +30,7 @@ public class Repeater extends Service {
             startActivity(i);
             handler.postDelayed(this, 12000);
 
+
         }
 
     };
@@ -44,9 +46,7 @@ public class Repeater extends Service {
     public void onDestroy()
     {
         super.onDestroy();
-        android.os.Process.killProcess(android.os.Process.myPid());
-        stopService(new Intent(this, Repeater.class));
-
+        handler.removeCallbacks(updateTimerThread);
     }
 
 
